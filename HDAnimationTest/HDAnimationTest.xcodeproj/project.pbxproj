@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3859296688F0C06F344BB783 /* Pods_HDAnimationTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05162E44CD66B756165D4C90 /* Pods_HDAnimationTestTests.framework */; };
+		404C12A6FB15EA5C52315195 /* Pods_HDAnimationTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A225BA1ADC28CC108EEF99BB /* Pods_HDAnimationTestUITests.framework */; };
 		6F3DFAF52058C4EA0085E9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAF42058C4EA0085E9C3 /* AppDelegate.swift */; };
 		6F3DFAF72058C4EA0085E9C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAF62058C4EA0085E9C3 /* ViewController.swift */; };
 		6F3DFAFA2058C4EA0085E9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFAF82058C4EA0085E9C3 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		6F3DFB0A2058C4EA0085E9C3 /* HDAnimationTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB092058C4EA0085E9C3 /* HDAnimationTestTests.swift */; };
 		6F3DFB152058C4EA0085E9C3 /* HDAnimationTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB142058C4EA0085E9C3 /* HDAnimationTestUITests.swift */; };
 		6F3DFB232058F4A70085E9C3 /* HDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB222058F4A70085E9C3 /* HDView.swift */; };
+		EB0538716F8E9DEDFB9B963C /* Pods_HDAnimationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378381FE52A7A574230FAD40 /* Pods_HDAnimationTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05162E44CD66B756165D4C90 /* Pods_HDAnimationTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDAnimationTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1200D84CEBF51F739AC88A2A /* Pods-HDAnimationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTest/Pods-HDAnimationTest.debug.xcconfig"; sourceTree = "<group>"; };
+		378381FE52A7A574230FAD40 /* Pods_HDAnimationTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDAnimationTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52903324368D7644A3F11104 /* Pods-HDAnimationTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTestTests/Pods-HDAnimationTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F3DFAF12058C4EA0085E9C3 /* HDAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3DFAF42058C4EA0085E9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F3DFAF62058C4EA0085E9C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		6F3DFB142058C4EA0085E9C3 /* HDAnimationTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDAnimationTestUITests.swift; sourceTree = "<group>"; };
 		6F3DFB162058C4EA0085E9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F3DFB222058F4A70085E9C3 /* HDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDView.swift; sourceTree = "<group>"; };
+		7527ED9097AC39991BEDEBB2 /* Pods-HDAnimationTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTestUITests/Pods-HDAnimationTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C8A50B66828420FDEA81E58 /* Pods-HDAnimationTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTestUITests/Pods-HDAnimationTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A225BA1ADC28CC108EEF99BB /* Pods_HDAnimationTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDAnimationTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD59DEF14198739ED59247E /* Pods-HDAnimationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTest/Pods-HDAnimationTest.release.xcconfig"; sourceTree = "<group>"; };
+		D879188C21F31B85102FEC2F /* Pods-HDAnimationTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTestTests/Pods-HDAnimationTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0538716F8E9DEDFB9B963C /* Pods_HDAnimationTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3859296688F0C06F344BB783 /* Pods_HDAnimationTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404C12A6FB15EA5C52315195 /* Pods_HDAnimationTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33CA30500AE2F00F9CA46B95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1200D84CEBF51F739AC88A2A /* Pods-HDAnimationTest.debug.xcconfig */,
+				BDD59DEF14198739ED59247E /* Pods-HDAnimationTest.release.xcconfig */,
+				D879188C21F31B85102FEC2F /* Pods-HDAnimationTestTests.debug.xcconfig */,
+				52903324368D7644A3F11104 /* Pods-HDAnimationTestTests.release.xcconfig */,
+				7527ED9097AC39991BEDEBB2 /* Pods-HDAnimationTestUITests.debug.xcconfig */,
+				8C8A50B66828420FDEA81E58 /* Pods-HDAnimationTestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6F3DFAE82058C4EA0085E9C3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				6F3DFB082058C4EA0085E9C3 /* HDAnimationTestTests */,
 				6F3DFB132058C4EA0085E9C3 /* HDAnimationTestUITests */,
 				6F3DFAF22058C4EA0085E9C3 /* Products */,
+				33CA30500AE2F00F9CA46B95 /* Pods */,
+				7A7901122C877584760CA18E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +158,16 @@
 			path = HDAnimationTestUITests;
 			sourceTree = "<group>";
 		};
+		7A7901122C877584760CA18E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				378381FE52A7A574230FAD40 /* Pods_HDAnimationTest.framework */,
+				05162E44CD66B756165D4C90 /* Pods_HDAnimationTestTests.framework */,
+				A225BA1ADC28CC108EEF99BB /* Pods_HDAnimationTestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F3DFB192058C4EA0085E9C3 /* Build configuration list for PBXNativeTarget "HDAnimationTest" */;
 			buildPhases = (
+				01B3AB22C8C966DA7132C7B4 /* [CP] Check Pods Manifest.lock */,
 				6F3DFAED2058C4EA0085E9C3 /* Sources */,
 				6F3DFAEE2058C4EA0085E9C3 /* Frameworks */,
 				6F3DFAEF2058C4EA0085E9C3 /* Resources */,
+				C8B4B73329922571E815081A /* [CP] Embed Pods Frameworks */,
+				E07553D2F0130185B9D0B6BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F3DFB1C2058C4EA0085E9C3 /* Build configuration list for PBXNativeTarget "HDAnimationTestTests" */;
 			buildPhases = (
+				3163DA58C6EE074CCC1B4304 /* [CP] Check Pods Manifest.lock */,
 				6F3DFB012058C4EA0085E9C3 /* Sources */,
 				6F3DFB022058C4EA0085E9C3 /* Frameworks */,
 				6F3DFB032058C4EA0085E9C3 /* Resources */,
+				A7CDB943FAB428D6553CA1B5 /* [CP] Embed Pods Frameworks */,
+				F6DD2A8E2063ED645BABE449 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F3DFB1F2058C4EA0085E9C3 /* Build configuration list for PBXNativeTarget "HDAnimationTestUITests" */;
 			buildPhases = (
+				42FA455E73AA1894ACB7E9D7 /* [CP] Check Pods Manifest.lock */,
 				6F3DFB0C2058C4EA0085E9C3 /* Sources */,
 				6F3DFB0D2058C4EA0085E9C3 /* Frameworks */,
 				6F3DFB0E2058C4EA0085E9C3 /* Resources */,
+				8FDB307C9521675AE5BF2771 /* [CP] Embed Pods Frameworks */,
+				060E16DD5501F8E9F26C75CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01B3AB22C8C966DA7132C7B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HDAnimationTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		060E16DD5501F8E9F26C75CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDAnimationTestUITests/Pods-HDAnimationTestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3163DA58C6EE074CCC1B4304 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HDAnimationTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42FA455E73AA1894ACB7E9D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HDAnimationTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FDB307C9521675AE5BF2771 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDAnimationTestUITests/Pods-HDAnimationTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7CDB943FAB428D6553CA1B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDAnimationTestTests/Pods-HDAnimationTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B4B73329922571E815081A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HDAnimationTest/Pods-HDAnimationTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDAnimationTest/Pods-HDAnimationTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E07553D2F0130185B9D0B6BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDAnimationTest/Pods-HDAnimationTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6DD2A8E2063ED645BABE449 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HDAnimationTestTests/Pods-HDAnimationTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F3DFAED2058C4EA0085E9C3 /* Sources */ = {
@@ -428,6 +627,7 @@
 		};
 		6F3DFB1A2058C4EA0085E9C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1200D84CEBF51F739AC88A2A /* Pods-HDAnimationTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,6 +644,7 @@
 		};
 		6F3DFB1B2058C4EA0085E9C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD59DEF14198739ED59247E /* Pods-HDAnimationTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +661,7 @@
 		};
 		6F3DFB1D2058C4EA0085E9C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D879188C21F31B85102FEC2F /* Pods-HDAnimationTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -476,6 +678,7 @@
 		};
 		6F3DFB1E2058C4EA0085E9C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52903324368D7644A3F11104 /* Pods-HDAnimationTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +695,7 @@
 		};
 		6F3DFB202058C4EA0085E9C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7527ED9097AC39991BEDEBB2 /* Pods-HDAnimationTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +711,7 @@
 		};
 		6F3DFB212058C4EA0085E9C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C8A50B66828420FDEA81E58 /* Pods-HDAnimationTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
