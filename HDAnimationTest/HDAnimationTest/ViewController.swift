@@ -15,11 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-//        //贝塞尔曲线
-//        let myView = HDView(frame: self.view.bounds)
-//        view.addSubview(myView)
+
         setUpUI()
     }
 
@@ -66,9 +62,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            print("11")
+            self.navigationController?.pushViewController(HDBezierViewController(), animated: true)
         case 1:
-            print("22")
+            self.navigationController?.pushViewController(HDRadarViewController(), animated: true)
         default:
             return
         }

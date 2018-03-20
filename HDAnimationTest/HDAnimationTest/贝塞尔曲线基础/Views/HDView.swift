@@ -47,18 +47,15 @@ class HDView: UIView {
         // Drawing code
         
         //五角星⭐️
-        let centerX = rect.size.width/2
-        let centerY = rect.size.height/2
-        
-        
+    
         //矩形贝塞尔曲线
-        let bezierPath_rec = UIBezierPath(rect: CGRect(x: 30, y: 50, width: 100, height: 100))
-        bezierPath_rec.move(to: CGPoint(x: 30, y: 50))
-        bezierPath_rec.addLine(to: CGPoint(x: 63, y: 83))
-        bezierPath_rec.addLine(to: CGPoint(x: 78, y:50 ))
-        bezierPath_rec.addLine(to: CGPoint(x: 96, y: 83))
-        bezierPath_rec.addLine(to: CGPoint(x: 129, y: 83))
-        bezierPath_rec.addLine(to: CGPoint(x: 96, y: 116))
+        let bezierPath_rec = UIBezierPath(rect: CGRect(x: 130, y: 150, width: 100, height: 100))
+        bezierPath_rec.move(to: CGPoint(x: 130, y: 150))
+        bezierPath_rec.addLine(to: CGPoint(x: 163, y: 183))
+        bezierPath_rec.addLine(to: CGPoint(x: 178, y:150 ))
+        bezierPath_rec.addLine(to: CGPoint(x: 196, y: 183))
+        bezierPath_rec.addLine(to: CGPoint(x: 229, y: 183))
+        bezierPath_rec.addLine(to: CGPoint(x: 196, y: 216))
    
         bezierPath_rec.lineCapStyle = .butt   //端点类型
         bezierPath_rec.lineJoinStyle = .miter //线条连接类型
@@ -66,7 +63,7 @@ class HDView: UIView {
         bezierPath_rec.lineWidth = 3
         
         //圆弧贝塞尔曲线
-        let bezierPath_arc = UIBezierPath(arcCenter: CGPoint(x: 0, y: 400), radius: 50, startAngle: CGFloat(0), endAngle: CGFloat(M_PI/3), clockwise: true)
+        let bezierPath_arc = UIBezierPath(arcCenter: CGPoint(x: 0, y: 400), radius: 50, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi/3), clockwise: true)
         bezierPath_arc.lineWidth = 3
         
         //添加多次贝塞尔曲线
@@ -76,7 +73,7 @@ class HDView: UIView {
         bezierPathMy.addLine(to: CGPoint(x: 50, y: 530))
         bezierPathMy.addQuadCurve(to: CGPoint(x: 100, y:510), controlPoint: CGPoint(x: 80, y: 650))
         bezierPathMy.addCurve(to: CGPoint(x: 200, y:530), controlPoint1: CGPoint(x: 130, y:600), controlPoint2: CGPoint(x: 170, y:400))
-        bezierPathMy.addArc(withCenter: CGPoint(x: 300, y:400), radius: 50, startAngle: 0, endAngle: CGFloat(M_PI*2), clockwise: true)
+        bezierPathMy.addArc(withCenter: CGPoint(x: 300, y:400), radius: 50, startAngle: 0, endAngle: CGFloat(Double.pi*2), clockwise: true)
         bezierPathMy.move(to: CGPoint(x: 20, y:520))
         bezierPathMy.addLine(to: CGPoint(x: 40, y:520))
         
