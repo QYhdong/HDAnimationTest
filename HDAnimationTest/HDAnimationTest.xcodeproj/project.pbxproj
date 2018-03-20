@@ -17,6 +17,7 @@
 		6F3DFB0A2058C4EA0085E9C3 /* HDAnimationTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB092058C4EA0085E9C3 /* HDAnimationTestTests.swift */; };
 		6F3DFB152058C4EA0085E9C3 /* HDAnimationTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB142058C4EA0085E9C3 /* HDAnimationTestUITests.swift */; };
 		6F3DFB232058F4A70085E9C3 /* HDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB222058F4A70085E9C3 /* HDView.swift */; };
+		6FACFCDC205FB23900FE52C1 /* HDPopOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACFCDB205FB23900FE52C1 /* HDPopOneView.swift */; };
 		EB0538716F8E9DEDFB9B963C /* Pods_HDAnimationTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378381FE52A7A574230FAD40 /* Pods_HDAnimationTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		6F3DFB142058C4EA0085E9C3 /* HDAnimationTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDAnimationTestUITests.swift; sourceTree = "<group>"; };
 		6F3DFB162058C4EA0085E9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F3DFB222058F4A70085E9C3 /* HDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDView.swift; sourceTree = "<group>"; };
+		6FACFCDB205FB23900FE52C1 /* HDPopOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDPopOneView.swift; sourceTree = "<group>"; };
+		6FACFCDD205FB41500FE52C1 /* Bridge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge_Header.h; sourceTree = "<group>"; };
 		7527ED9097AC39991BEDEBB2 /* Pods-HDAnimationTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTestUITests/Pods-HDAnimationTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C8A50B66828420FDEA81E58 /* Pods-HDAnimationTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HDAnimationTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HDAnimationTestUITests/Pods-HDAnimationTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A225BA1ADC28CC108EEF99BB /* Pods_HDAnimationTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HDAnimationTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +107,69 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6F2491E82060A8590044A286 /* 雷达波纹 */ = {
+			isa = PBXGroup;
+			children = (
+				6F2491E92060A8590044A286 /* Controllers */,
+				6F2491EA2060A8590044A286 /* Models */,
+				6F2491EB2060A8590044A286 /* Views */,
+			);
+			path = "雷达波纹";
+			sourceTree = "<group>";
+		};
+		6F2491E92060A8590044A286 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F2491EA2060A8590044A286 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F2491EB2060A8590044A286 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F2491EC2060A85A0044A286 /* 贝塞尔曲线基础 */ = {
+			isa = PBXGroup;
+			children = (
+				6F2491ED2060A85A0044A286 /* Controllers */,
+				6F2491EE2060A85A0044A286 /* Models */,
+				6F2491EF2060A85A0044A286 /* Views */,
+			);
+			path = "贝塞尔曲线基础";
+			sourceTree = "<group>";
+		};
+		6F2491ED2060A85A0044A286 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F2491EE2060A85A0044A286 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F2491EF2060A85A0044A286 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DFB222058F4A70085E9C3 /* HDView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6F3DFAE82058C4EA0085E9C3 = {
 			isa = PBXGroup;
 			children = (
@@ -129,13 +195,16 @@
 		6F3DFAF32058C4EA0085E9C3 /* HDAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
+				6F2491EC2060A85A0044A286 /* 贝塞尔曲线基础 */,
+				6F2491E82060A8590044A286 /* 雷达波纹 */,
 				6F3DFAF42058C4EA0085E9C3 /* AppDelegate.swift */,
 				6F3DFAF62058C4EA0085E9C3 /* ViewController.swift */,
 				6F3DFAF82058C4EA0085E9C3 /* Main.storyboard */,
 				6F3DFAFB2058C4EA0085E9C3 /* Assets.xcassets */,
 				6F3DFAFD2058C4EA0085E9C3 /* LaunchScreen.storyboard */,
 				6F3DFB002058C4EA0085E9C3 /* Info.plist */,
-				6F3DFB222058F4A70085E9C3 /* HDView.swift */,
+				6FACFCDB205FB23900FE52C1 /* HDPopOneView.swift */,
+				6FACFCDD205FB41500FE52C1 /* Bridge_Header.h */,
 			);
 			path = HDAnimationTest;
 			sourceTree = "<group>";
@@ -462,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F3DFAF72058C4EA0085E9C3 /* ViewController.swift in Sources */,
+				6FACFCDC205FB23900FE52C1 /* HDPopOneView.swift in Sources */,
 				6F3DFB232058F4A70085E9C3 /* HDView.swift in Sources */,
 				6F3DFAF52058C4EA0085E9C3 /* AppDelegate.swift in Sources */,
 			);
@@ -630,6 +700,7 @@
 			baseConfigurationReference = 1200D84CEBF51F739AC88A2A /* Pods-HDAnimationTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQD3WTCE79;
 				INFOPLIST_FILE = HDAnimationTest/Info.plist;
@@ -637,6 +708,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongddd.HDAnimationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HDAnimationTest/Bridge_Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -647,6 +719,7 @@
 			baseConfigurationReference = BDD59DEF14198739ED59247E /* Pods-HDAnimationTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQD3WTCE79;
 				INFOPLIST_FILE = HDAnimationTest/Info.plist;
@@ -654,6 +727,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongddd.HDAnimationTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HDAnimationTest/Bridge_Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
