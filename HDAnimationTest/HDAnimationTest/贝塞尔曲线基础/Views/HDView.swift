@@ -43,11 +43,55 @@ class HDView: UIView {
 
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
+    
     override func draw(_ rect: CGRect) {
         // Drawing code
         
         //五角星⭐️
+            bezierTestOne()
+        
+            bezierTestTwo()
+
+    }
+
+    func bezierTestTwo() {
+        
+        //路径
+        let bezierA = UIBezierPath()
+        bezierA.lineWidth = 2
+        bezierA.move(to: CGPoint(x: 100, y: 300))
+        bezierA.addLine(to: CGPoint(x: 140, y: 300))
+        bezierA.move(to: CGPoint(x: 105, y: 320))
+        bezierA.addLine(to: CGPoint(x: 135, y: 320))
+        bezierA.move(to: CGPoint(x: 120, y: 300))
+        bezierA.addLine(to: CGPoint(x: 120, y: 340))
+        bezierA.move(to: CGPoint(x: 100, y: 340))
+        bezierA.addLine(to: CGPoint(x: 140, y: 340))
+//        UIColor.blue.set()
+//        bezierA.stroke()
+        
+        //图层
+        let aaaLayer = CAShapeLayer()
+        aaaLayer.path = bezierA.cgPath
+        aaaLayer.frame = self.bounds
+        aaaLayer.strokeColor = HDDefineInfo().baseBlueColor.cgColor
+        aaaLayer.lineWidth = 2
+        aaaLayer.fillColor = nil
+        aaaLayer.lineJoin = kCALineJoinBevel
+        self.layer.addSublayer(aaaLayer)
+        
+        //执行动画
+        let pathAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        pathAnimation.duration = 3
+        pathAnimation.fromValue = NSNumber(value: 0)
+        pathAnimation.toValue = NSNumber(value: 1)
+        
+//        pathAnimation.byValue = NSNumber(value: 1)
+        aaaLayer.add(pathAnimation, forKey: "strokeEnd")
+        
+    }
     
+    func bezierTestOne() {
         //矩形贝塞尔曲线
         let bezierPath_rec = UIBezierPath(rect: CGRect(x: 130, y: 150, width: 100, height: 100))
         bezierPath_rec.move(to: CGPoint(x: 130, y: 150))
@@ -56,7 +100,7 @@ class HDView: UIView {
         bezierPath_rec.addLine(to: CGPoint(x: 196, y: 183))
         bezierPath_rec.addLine(to: CGPoint(x: 229, y: 183))
         bezierPath_rec.addLine(to: CGPoint(x: 196, y: 216))
-   
+        
         bezierPath_rec.lineCapStyle = .butt   //端点类型
         bezierPath_rec.lineJoinStyle = .miter //线条连接类型
         bezierPath_rec.miterLimit = 1
@@ -97,7 +141,6 @@ class HDView: UIView {
         keyFrameAnima.beginTime = CACurrentMediaTime() + 1
         aniLayer.add(keyFrameAnima, forKey: "keyFrameAnimation")
     }
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)

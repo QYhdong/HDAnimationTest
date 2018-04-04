@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     fileprivate func  setUpUI()  {
         
-        typeArr = ["贝塞尔曲线","雷达波纹"]
+        typeArr = ["CoreAnimation练习","贝塞尔曲线","雷达波纹"]
         
         self.title = "HDAnimationTest"
         
@@ -54,7 +54,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "popTableViewCell", for: indexPath) as! popTableViewCell
+        cell.selectionStyle = .none
         cell.textLabel?.text = typeArr[indexPath.row]
         return cell
     }
@@ -62,8 +64,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            self.navigationController?.pushViewController(HDBezierViewController(), animated: true)
+            self.navigationController?.pushViewController(HDCoreAnimationViewController(), animated: true)
         case 1:
+            self.navigationController?.pushViewController(HDBezierViewController(), animated: true)
+        case 2:
             self.navigationController?.pushViewController(HDRadarViewController(), animated: true)
         default:
             return

@@ -56,12 +56,12 @@ class HDRadarView: UIView {
         shapeLayer.anchorPoint = CGPoint(x: 0, y: 0)
         shapeLayer.bounds = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         
-        //bezier
+        //bezier贝塞尔
         let bezierPath_w = UIBezierPath(ovalIn: CGRect(x: circleView.frame.minX, y: circleView.frame.minY, width: circleWidthHeight, height: circleWidthHeight))
         shapeLayer.path = bezierPath_w.cgPath
         shapeLayer.strokeColor = UIColor.init(red: 106/255, green: 200/255, blue: 250/255, alpha: 1).cgColor
-        shapeLayer.lineWidth = 2
         shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.lineWidth = 2
         layer.insertSublayer(shapeLayer, below: circleView.layer)
 //        layer.insertSublayer(shapeLayer, above: circleView.layer)
 //        layer.insertSublayer(shapeLayer, at: 0)
