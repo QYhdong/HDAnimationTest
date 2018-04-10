@@ -68,3 +68,18 @@ CAAnimation核心动画基础类,相关属性:
 
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/AnimationTimingFunction.gif)
+
+子类CAPropertyAnimation属性动画也属于是抽象类。它的两个子类才能直接对layer层进行动画操作，其中CABasicAnimation负责基础动画，CAKeyframeAnimation负责关键帧动画。
+
+其中CAPropertyAnimation中的相关属性:
+
+
+ //CALayer的属性名,根据相应属性名达到相应动画效果
+ open var keyPath: String?
+//是否以当前动画效果为基础(默认为false)    
+ open var isAdditive: Bool
+//动画是否为累加效果,默认为false
+ open var isCumulative: Bool
+//动画值,配合transform属性使用
+ open var valueFunction: CAValueFunction?
+
