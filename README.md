@@ -92,4 +92,18 @@ CABasicAnimation基础动画:
     //过渡值(在当前的位置上增加多少,不设置toValue时，toValue = fromValue + byValue)
     open var byValue: Any?
 
+CASpringAnimation弹簧动画是CABasicAnimation的子类,是苹果专门解决开发者关于弹簧动画的这个需求而封装的类,相关属性:
+
+
+//质量 直接影响弹簧惯性, 质量越大则压缩和拉伸的程度越大
+    open var mass: CGFloat
+//劲度系数,形变越大 劲度系数越大
+    open var stiffness: CGFloat
+//阻尼系数,阻尼越大 停止越快
+    open var damping: CGFloat
+// 初始速度,正值与运动方向一致,负值与运动方向相反
+    open var initialVelocity: CGFloat
+// 预估时间,根据以上参数计算出的预估时间
+    open var settlingDuration: CFTimeInterval { get }
+
 
