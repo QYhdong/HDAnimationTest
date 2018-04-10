@@ -74,36 +74,36 @@ CAAnimation核心动画基础类,相关属性:
 其中CAPropertyAnimation中的相关属性:
 
 
- //CALayer的属性名,根据相应属性名达到相应动画效果
- open var keyPath: String?
-//是否以当前动画效果为基础(默认为false)    
- open var isAdditive: Bool
-//动画是否为累加效果,默认为false
- open var isCumulative: Bool
-//动画值,配合transform属性使用
- open var valueFunction: CAValueFunction?
+ 	//CALayer的属性名,根据相应属性名达到相应动画效果
+	 open var keyPath: String?
+	//是否以当前动画效果为基础(默认为false)    
+	 open var isAdditive: Bool
+	//动画是否为累加效果,默认为false
+	 open var isCumulative: Bool
+	//动画值,配合transform属性使用
+	 open var valueFunction: CAValueFunction?
 
 
 CABasicAnimation基础动画:
-    //keyPath属性的初始值
-    open var fromValue: Any?
-    //keyPath属性的结束值
-    open var toValue: Any?
-    //过渡值(在当前的位置上增加多少,不设置toValue时，toValue = fromValue + byValue)
-    open var byValue: Any?
+
+	//keyPath属性的初始值
+ 	 open var fromValue: Any?
+	//keyPath属性的结束值
+ 	 open var toValue: Any?
+	//过渡值(在当前的位置上增加多少,不设置toValue时，toValue = fromValue + byValue)
+ 	 open var byValue: Any?
 
 CASpringAnimation弹簧动画是CABasicAnimation的子类,是苹果专门解决开发者关于弹簧动画的这个需求而封装的类,相关属性:
 
-
-//质量 直接影响弹簧惯性, 质量越大则压缩和拉伸的程度越大
+	//质量 直接影响弹簧惯性, 质量越大则压缩和拉伸的程度越大
     open var mass: CGFloat
-//劲度系数,形变越大 劲度系数越大
+	//劲度系数,形变越大 劲度系数越大
     open var stiffness: CGFloat
-//阻尼系数,阻尼越大 停止越快
+	//阻尼系数,阻尼越大 停止越快
     open var damping: CGFloat
-// 初始速度,正值与运动方向一致,负值与运动方向相反
+	// 初始速度,正值与运动方向一致,负值与运动方向相反
     open var initialVelocity: CGFloat
-// 预估时间,根据以上参数计算出的预估时间
+	// 预估时间,根据以上参数计算出的预估时间
     open var settlingDuration: CFTimeInterval { get }
 
 
