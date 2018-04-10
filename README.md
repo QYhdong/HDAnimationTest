@@ -83,3 +83,13 @@ CAAnimation核心动画基础类,相关属性:
 //动画值,配合transform属性使用
  open var valueFunction: CAValueFunction?
 
+
+CABasicAnimation基础动画:
+    //keyPath属性的初始值
+    open var fromValue: Any?
+    //keyPath属性的结束值
+    open var toValue: Any?
+    //过渡值(在当前的位置上增加多少,不设置toValue时，toValue = fromValue + byValue)
+    open var byValue: Any?
+
+
