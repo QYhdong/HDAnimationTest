@@ -127,3 +127,6 @@ CAKeyframeAnimation关键帧动画:
     open var biasValues: [NSNumber]?
     //动画沿路径旋转方式
     open var rotationMode: String?
+
+
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transition1.gif)
