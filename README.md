@@ -107,3 +107,23 @@ CASpringAnimation弹簧动画是CABasicAnimation的子类,是苹果专门解决�
     open var settlingDuration: CFTimeInterval { get }
 
 
+CAKeyframeAnimation关键帧动画:
+
+    //由关键帧组成的数组,动画依次显示每一帧
+    open var values: [Any]?
+    //关键帧路径,优先级比values高,如果设置了path将忽略values,只对CALayer的anchorPonit和position起作用
+    open var path: CGPath?
+    //每一帧对应的时间,不设置的话,各关键帧平分设定时间
+    open var keyTimes: [NSNumber]?
+    //每一帧对应的动画节奏
+    open var timingFunctions: [CAMediaTimingFunction]?
+    //动画计算模式
+    open var calculationMode: String
+    //动画张力
+    open var tensionValues: [NSNumber]?
+    //动画连续性
+    open var continuityValues: [NSNumber]?
+    //动画偏差率
+    open var biasValues: [NSNumber]?
+    //动画沿路径旋转方式
+    open var rotationMode: String?
