@@ -12,6 +12,8 @@
 		6F2491F12060BAD00044A286 /* HDBezierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2491F02060BAD00044A286 /* HDBezierViewController.swift */; };
 		6F2491F32060BC830044A286 /* HDRadarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2491F22060BC830044A286 /* HDRadarViewController.swift */; };
 		6F2491F52060BD650044A286 /* HDRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2491F42060BD650044A286 /* HDRadarView.swift */; };
+		6F3B5739207DA83E00E507FA /* BaseAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B5738207DA83E00E507FA /* BaseAnimationViewController.swift */; };
+		6F3B573F207DE0AF00E507FA /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3B573E207DE0AF00E507FA /* TransitionViewController.swift */; };
 		6F3DFAF52058C4EA0085E9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAF42058C4EA0085E9C3 /* AppDelegate.swift */; };
 		6F3DFAF72058C4EA0085E9C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFAF62058C4EA0085E9C3 /* ViewController.swift */; };
 		6F3DFAFA2058C4EA0085E9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DFAF82058C4EA0085E9C3 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		6F2491F02060BAD00044A286 /* HDBezierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDBezierViewController.swift; sourceTree = "<group>"; };
 		6F2491F22060BC830044A286 /* HDRadarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDRadarViewController.swift; sourceTree = "<group>"; };
 		6F2491F42060BD650044A286 /* HDRadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDRadarView.swift; sourceTree = "<group>"; };
+		6F3B5738207DA83E00E507FA /* BaseAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationViewController.swift; sourceTree = "<group>"; };
+		6F3B573E207DE0AF00E507FA /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 		6F3DFAF12058C4EA0085E9C3 /* HDAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3DFAF42058C4EA0085E9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F3DFAF62058C4EA0085E9C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 			isa = PBXGroup;
 			children = (
 				6F8B33292069F25E00EB73E3 /* HDCoreAnimationViewController.swift */,
+				6F3B5738207DA83E00E507FA /* BaseAnimationViewController.swift */,
+				6F3B573E207DE0AF00E507FA /* TransitionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -653,11 +659,13 @@
 				6F3DFAF72058C4EA0085E9C3 /* ViewController.swift in Sources */,
 				6FACFCDC205FB23900FE52C1 /* HDPopOneView.swift in Sources */,
 				6F8B332A2069F25E00EB73E3 /* HDCoreAnimationViewController.swift in Sources */,
+				6F3B5739207DA83E00E507FA /* BaseAnimationViewController.swift in Sources */,
 				6F3DFB232058F4A70085E9C3 /* HDView.swift in Sources */,
 				6F2491F12060BAD00044A286 /* HDBezierViewController.swift in Sources */,
 				6F50FB0820634C0800CC2226 /* HDPencilViewController.swift in Sources */,
 				6F3DFAF52058C4EA0085E9C3 /* AppDelegate.swift in Sources */,
 				6F2491F32060BC830044A286 /* HDRadarViewController.swift in Sources */,
+				6F3B573F207DE0AF00E507FA /* TransitionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

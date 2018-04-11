@@ -10,6 +10,9 @@ import UIKit
 
 class HDCoreAnimationView: UIView {
 
+    
+    public var animationTypes:animationType?            //动画类型
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
@@ -21,9 +24,18 @@ class HDCoreAnimationView: UIView {
     
     override func draw(_ rect: CGRect) {
         
-        baseAnimationTest()
-        keyFrameAnimationTest()
-        springAnimation()
+        //动画类型
+        switch animationTypes?.hashValue {
+        case 0:
+            baseAnimationTest()
+        case 1:
+             keyFrameAnimationTest()
+        case 2:
+            springAnimation()
+        default:
+            print("")
+        }
+
     }
     
     //基础动画
@@ -50,19 +62,33 @@ class HDCoreAnimationView: UIView {
     
     //关键帧动画
     func keyFrameAnimationTest(){
+        
+        let layerA = hdCreatLayer(point: CGPoint(x: 100, y: 200))
+        layerA.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
+        let keyAnimationA = CAKeyframeAnimation(keyPath: "bounds")
+
+        keyAnimationA.values = [CGRect(x: 0, y: 0, width: 100, height: 100) ,CGRect(x: 0, y: 0, width: 50, height: 50),CGRect(x: 0, y: 0, width: 150, height: 150),CGRect(x: 0, y: 0, width: 50, height: 50),CGRect(x: 0, y: 0, width: 20, height: 20)]
+        keyAnimationA.duration = 5
+        keyAnimationA.repeatCount = MAXFLOAT
+        layerA.add(keyAnimationA, forKey: "bounds")
+        
+        
         let layerB = hdCreatLayer(point: CGPoint(x: 100, y: 500))
         layerB.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
         layerB.backgroundColor = HDDefineInfo().baseBlueColor.cgColor
         
-        let keyAnimation = CAKeyframeAnimation(keyPath: "scale")
-        keyAnimation.values = [CGPoint(x: 100, y: 500),CGPoint(x: 250, y: 500),CGPoint(x: 250, y: 400),CGPoint(x: 100, y: 400),CGPoint(x:100,y:500)]
-        keyAnimation.duration = 5
-        keyAnimation.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear),CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn),CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)]
+        let keyAnimationB = CAKeyframeAnimation(keyPath: "position")
+        keyAnimationB.values = [CGPoint(x: 100, y: 500),CGPoint(x: 250, y: 500),CGPoint(x: 250, y: 400),CGPoint(x: 100, y: 400),CGPoint(x:100,y:500)]
+        keyAnimationB.duration = 5
         
-        keyAnimation.isRemovedOnCompletion = false
-        keyAnimation.fillMode = kCAFillModeForwards
+        keyAnimationB.timingFunctions = [CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear),CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn),CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)]
         
-        layerB.add(keyAnimation, forKey: "scale")
+        keyAnimationB.repeatCount = MAXFLOAT
+//        //动画结束后停留
+//        keyAnimation.isRemovedOnCompletion = false
+//        keyAnimation.fillMode = kCAFillModeForwards
+        
+        layerB.add(keyAnimationB, forKey: "position")
     }
     
     //弹性动画
@@ -79,11 +105,6 @@ class HDCoreAnimationView: UIView {
         layerC.add(springAnimation, forKey: "position")
     }
     
-    //转场动画
-    func transitionAnimation(){
-        let layerrr = CALayer()
-        let transitionA = CATransition()
-    }
     
     //组动画
     func groupAnimation(){
@@ -116,6 +137,7 @@ class HDCoreAnimationView: UIView {
         baseAnimation.toValue = NSValue(cgPoint: point)
         baseAnimation.duration = 3
         //        baseAnimation.speed = 1.5
+        //节奏类型选择
         baseAnimation.timingFunction = CAMediaTimingFunction(name: funtionType)
         baseAnimation.repeatCount = Float(NSIntegerMax)
         return baseAnimation
