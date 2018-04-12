@@ -128,5 +128,9 @@ CAKeyframeAnimation关键帧动画:
     //动画沿路径旋转方式
     open var rotationMode: String?
 
+CAAnimationGroup动画组,多动画统一管理
+
+    //包含所有动画的数组 
+    open var animations: [CAAnimation]?
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transition1.gif)
