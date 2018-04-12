@@ -132,5 +132,16 @@ CAAnimationGroup动画组,多动画统一管理
 
     //包含所有动画的数组 
     open var animations: [CAAnimation]?
+    
+CATransition转场动画,属性如下:
+
+    //转场动画类型
+    open var type: String
+    //动画方向
+    open var subtype: String?
+    //动画起点进度 百分比
+    open var startProgress: Float
+    //动画终点进度 百分比
+    open var endProgress: Float
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transition1.gif)
