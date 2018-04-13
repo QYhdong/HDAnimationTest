@@ -125,14 +125,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6F2491E82060A8590044A286 /* 雷达波纹效果 */ = {
+		6F2491E82060A8590044A286 /* 效果 */ = {
 			isa = PBXGroup;
 			children = (
 				6F2491E92060A8590044A286 /* Controllers */,
 				6F2491EA2060A8590044A286 /* Models */,
 				6F2491EB2060A8590044A286 /* Views */,
 			);
-			path = "雷达波纹效果";
+			path = "效果";
 			sourceTree = "<group>";
 		};
 		6F2491E92060A8590044A286 /* Controllers */ = {
@@ -251,7 +251,7 @@
 				6F50FB0320634BBD00CC2226 /* 进度条效果 */,
 				6F2491F6206127780044A286 /* 微博效果 */,
 				6F2491EC2060A85A0044A286 /* 贝塞尔曲线基础 */,
-				6F2491E82060A8590044A286 /* 雷达波纹效果 */,
+				6F2491E82060A8590044A286 /* 效果 */,
 				6F3DFAF42058C4EA0085E9C3 /* AppDelegate.swift */,
 				6F3DFAF62058C4EA0085E9C3 /* ViewController.swift */,
 				6F3DFAF82058C4EA0085E9C3 /* Main.storyboard */,
