@@ -67,8 +67,6 @@ CAAnimation核心动画基础类,相关属性:
     open var isRemovedOnCompletion: Bool
 
 
-![img](https://github.com/QYhdong/HDAnimationTest/blob/master/BaseAnimation.gif)
-
 子类CAPropertyAnimation属性动画也属于是抽象类。它的两个子类才能直接对layer层进行动画操作，其中CABasicAnimation负责基础动画，CAKeyframeAnimation负责关键帧动画。
 
 其中CAPropertyAnimation中的相关属性:
@@ -92,6 +90,8 @@ CABasicAnimation基础动画:
  	 open var toValue: Any?
 	//过渡值(在当前的位置上增加多少,不设置toValue时，toValue = fromValue + byValue)
  	 open var byValue: Any?
+
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/BaseAnimation.gif)
 
 CASpringAnimation弹簧动画是CABasicAnimation的子类,是苹果专门解决开发者关于弹簧动画的这个需求而封装的类,相关属性:
 
@@ -132,6 +132,8 @@ CAAnimationGroup动画组,多动画统一管理
 
     //包含所有动画的数组 
     open var animations: [CAAnimation]?
+   
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/groupAnimation.gif)
     
 CATransition转场动画,属性如下:
 
