@@ -13,6 +13,7 @@ enum animationType {
     case base
     case keyFrame
     case spring
+    case group
 }
 
 class HDCoreAnimationViewController: UIViewController {
@@ -28,9 +29,7 @@ class HDCoreAnimationViewController: UIViewController {
   
 fileprivate func  setUpUI()  {
     
-    typeArr = ["BaseAnimation","KeyFrameAnimation","SpringAnimation","TransitionViewController"]
-    
-    self.title = "HDAnimationTest"
+    typeArr = ["BaseAnimation","KeyFrameAnimation","SpringAnimation","GroupAnimation","TransitionViewController"]
     
     view.addSubview(mainTableView)
 }
@@ -66,7 +65,7 @@ extension HDCoreAnimationViewController:UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == 3{
+        if indexPath.row == 4{
             self.navigationController?.pushViewController(TransitionViewController(), animated: true)
             return
         }
@@ -81,6 +80,9 @@ extension HDCoreAnimationViewController:UITableViewDelegate,UITableViewDataSourc
             break
         case 2:
             animationVc.type = .spring
+            break
+        case 3:
+            animationVc.type = .group
             break
         default:
             return

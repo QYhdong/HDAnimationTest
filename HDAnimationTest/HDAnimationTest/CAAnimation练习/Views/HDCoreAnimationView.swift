@@ -27,11 +27,13 @@ class HDCoreAnimationView: UIView {
         //动画类型
         switch animationTypes?.hashValue {
         case 0:
-            baseAnimationTest()
+            baseAnimationTest()                         //基础动画
         case 1:
-             keyFrameAnimationTest()
+             keyFrameAnimationTest()                //关键帧动画
         case 2:
-            springAnimation()
+            springAnimation()                             //弹性动画
+        case 3:
+            groupAnimation()                             //组合动画
         default:
             print("")
         }
@@ -52,11 +54,37 @@ class HDCoreAnimationView: UIView {
         hdCreatLayer(point: CGPoint(x: 20, y: 270)).add( animationTimeTimingFunction(CGPoint(x: 200, y: 270), kCAMediaTimingFunctionEaseInEaseOut), forKey: "position")
         hdCreatLayer(point: CGPoint(x: 20, y: 320)).add( animationTimeTimingFunction(CGPoint(x: 200, y: 320), kCAMediaTimingFunctionDefault), forKey: "position")
         
+        //文字说明label
         hdCreatLabel(framee: CGRect(x: SCREEN_WIDTH - 100, y: 110, width: 100, height: 30),title: "Linear")
         hdCreatLabel(framee: CGRect(x: SCREEN_WIDTH - 100, y: 160, width: 100, height: 30),title: "EaseIn")
         hdCreatLabel(framee: CGRect(x: SCREEN_WIDTH - 100, y: 210, width: 100, height: 30),title: "EaseOut")
         hdCreatLabel(framee: CGRect(x: SCREEN_WIDTH - 100, y: 260, width: 100, height: 30),title: "EaseInEaseOut")
         hdCreatLabel(framee: CGRect(x: SCREEN_WIDTH - 100, y: 310, width: 100, height: 30),title: "Default")
+        
+        //旋转
+        let layerA = hdCreatLayer(point: CGPoint(x: 50, y: 400))
+        layerA.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
+        let baseAnimationA = CABasicAnimation(keyPath: "transform.rotation")
+        baseAnimationA.duration = 5
+        baseAnimationA.toValue = Double.pi
+        baseAnimationA.repeatCount = MAXFLOAT
+        layerA.add(baseAnimationA, forKey: "transform.rotation")
+        //圆角
+        let layerB = hdCreatLayer(point: CGPoint(x: 50, y: 500))
+        layerB.bounds = CGRect(x: 0, y: 0, width: 70, height: 70)
+        let baseAnimationB = CABasicAnimation(keyPath: "cornerRadius")
+        baseAnimationB.duration = 5
+        baseAnimationB.repeatCount = MAXFLOAT
+        baseAnimationB.toValue = 35
+        layerB.add(baseAnimationB, forKey: "cornerRadius")
+        //透明度
+        let layerC = hdCreatLayer(point: CGPoint(x: 150, y: 500))
+        layerC.bounds = CGRect(x: 0, y: 0, width: 70, height: 70)
+        let baseAnimationC = CABasicAnimation(keyPath: "opacity")
+        baseAnimationC.duration = 5
+        baseAnimationC.repeatCount = MAXFLOAT
+        baseAnimationC.toValue = 0
+        layerC.add(baseAnimationC, forKey: "opacity")
         
     }
     
@@ -66,7 +94,7 @@ class HDCoreAnimationView: UIView {
         let layerA = hdCreatLayer(point: CGPoint(x: 100, y: 200))
         layerA.bounds = CGRect(x: 0, y: 0, width: 50, height: 50)
         let keyAnimationA = CAKeyframeAnimation(keyPath: "bounds")
-
+        //设置关键帧valus
         keyAnimationA.values = [CGRect(x: 0, y: 0, width: 100, height: 100) ,CGRect(x: 0, y: 0, width: 50, height: 50),CGRect(x: 0, y: 0, width: 150, height: 150),CGRect(x: 0, y: 0, width: 50, height: 50),CGRect(x: 0, y: 0, width: 20, height: 20)]
         keyAnimationA.duration = 5
         keyAnimationA.repeatCount = MAXFLOAT
@@ -109,7 +137,32 @@ class HDCoreAnimationView: UIView {
     //组动画
     func groupAnimation(){
         
+        //旋转 圆角 透明
+        let layerA = hdCreatLayer(point: CGPoint(x: 100, y: 200))
+        layerA.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let baseAnimationA = CABasicAnimation(keyPath: "transform.rotation")
+        baseAnimationA.duration = 5
+        baseAnimationA.toValue = Double.pi
+
+        let baseAnimationB = CABasicAnimation(keyPath: "cornerRadius")
+        baseAnimationB.duration = 5
+        baseAnimationB.toValue = 35
+
+        let baseAnimationC = CABasicAnimation(keyPath: "opacity")
+        baseAnimationC.duration = 5
+        baseAnimationC.fromValue = 0.3
+        baseAnimationC.toValue = 1
+        
+        let keyAnimationD = CAKeyframeAnimation(keyPath: "position")
+        keyAnimationD.values = [CGPoint(x: 100, y: 200),CGPoint(x: 100, y: 300),CGPoint(x: 250, y: 300),CGPoint(x: 250, y: 200),CGPoint(x: 100, y: 200)]
+        keyAnimationD.duration = 5
+        
         let groupA  = CAAnimationGroup()
+        groupA.duration = 5
+        groupA.repeatCount = MAXFLOAT
+        groupA.animations = [baseAnimationA, baseAnimationB, baseAnimationC,keyAnimationD]
+        
+        layerA.add(groupA, forKey: nil)
         
     }
     
@@ -135,7 +188,7 @@ class HDCoreAnimationView: UIView {
     func animationTimeTimingFunction(_ point:CGPoint,_ funtionType:String) -> CABasicAnimation {
         let baseAnimation = CABasicAnimation(keyPath: "position")
         baseAnimation.toValue = NSValue(cgPoint: point)
-        baseAnimation.duration = 3
+        baseAnimation.duration = 5
         //        baseAnimation.speed = 1.5
         //节奏类型选择
         baseAnimation.timingFunction = CAMediaTimingFunction(name: funtionType)

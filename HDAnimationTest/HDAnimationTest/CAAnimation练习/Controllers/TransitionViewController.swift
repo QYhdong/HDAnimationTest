@@ -12,10 +12,13 @@ class TransitionViewController: UIViewController {
 
     fileprivate var showImageView:UIImageView!
     fileprivate var imageName:String!
+    fileprivate var count:Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        count = 0
+        
         view.backgroundColor = UIColor.white
         imageName = "WechatIMG178"
         
@@ -38,13 +41,49 @@ class TransitionViewController: UIViewController {
 
     @objc fileprivate func transitionClick(){
         let transitionAnimatiion = CATransition()
-        transitionAnimatiion.duration = 5
+        transitionAnimatiion.duration = 3
 //        transitionAnimatiion.fillMode = kCAFillModeForwards
         /*
          常用的一些系统提供的类型
         @"cube" @"moveIn" @"reveal" @"fade"(默认) @"pageCurl" @"pageUnCurl" @"suckEffect" @"rippleEffect" @"oglFlip"
     */
-        transitionAnimatiion.type = "oglFlip"
+        var typeName:String!
+        switch count {
+        case 0:
+            typeName = "cube"
+            break
+        case 1:
+            typeName = "moveIn"
+            break
+        case 2:
+            typeName = "reveal"
+            break
+        case 3:
+            typeName = "fade"
+            break
+        case 4:
+            typeName = "pageCurl"
+            break
+        case 5:
+            typeName = "pageUnCurl"
+            break
+        case 6:
+            typeName = "suckEffect"
+            break
+        case 7:
+            typeName = "rippleEffect"
+            break
+        case 8:
+            typeName = "oglFlip"
+            break
+        default:
+            return
+        }
+        count = count + 1
+        if count == 9 {
+            count = 0
+        }
+        transitionAnimatiion.type = typeName
         transitionAnimatiion.subtype = kCATransitionFromLeft
         
         self.showImageView.layer.add(transitionAnimatiion, forKey: "")
