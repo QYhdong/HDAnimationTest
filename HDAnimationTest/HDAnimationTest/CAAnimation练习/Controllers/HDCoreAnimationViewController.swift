@@ -61,6 +61,7 @@ extension HDCoreAnimationViewController:UITableViewDelegate,UITableViewDataSourc
         cell.selectionStyle = .none
         cell.textLabel?.text = typeArr[indexPath.row]
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

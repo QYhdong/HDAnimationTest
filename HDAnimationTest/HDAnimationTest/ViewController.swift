@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     fileprivate func  setUpUI()  {
         
-        typeArr = ["CoreAnimation练习","贝塞尔曲线","雷达波纹"]
+        typeArr = ["CoreAnimation练习","贝塞尔曲线","雷达波纹","音量效果"]
         
         self.title = "HDAnimationTest"
         
@@ -63,11 +63,13 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0:
+        case 0:     //核心动画
             self.navigationController?.pushViewController(HDCoreAnimationViewController(), animated: true)
-        case 1:
+        case 1:     //贝塞尔曲线
             self.navigationController?.pushViewController(HDBezierViewController(), animated: true)
-        case 2:
+        case 2:     //雷达
+            self.navigationController?.pushViewController(HDRadarViewController(), animated: true)
+        case 3:     //音量
             self.navigationController?.pushViewController(HDRadarViewController(), animated: true)
         default:
             return
