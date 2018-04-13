@@ -144,4 +144,4 @@ CATransition转场动画,属性如下:
     //动画终点进度 百分比
     open var endProgress: Float
 
-![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transition1.gif)
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transitionAnimation.gif)
