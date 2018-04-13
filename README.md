@@ -67,7 +67,7 @@ CAAnimation核心动画基础类,相关属性:
     open var isRemovedOnCompletion: Bool
 
 
-![img](https://github.com/QYhdong/HDAnimationTest/blob/master/AnimationTimingFunction.gif)
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/BaseAnimation.gif)
 
 子类CAPropertyAnimation属性动画也属于是抽象类。它的两个子类才能直接对layer层进行动画操作，其中CABasicAnimation负责基础动画，CAKeyframeAnimation负责关键帧动画。
 
