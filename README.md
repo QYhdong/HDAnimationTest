@@ -1,6 +1,10 @@
 # HDAnimationTest
 Some daily exercises of animation
 
+//动画demo
+
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/HDRadarWave.gif)
+
 iOS动画
 
 UIView与CALayer的关系:
@@ -148,6 +152,4 @@ CATransition转场动画,属性如下:
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transitionAnimation.gif)
 
-//动画demo
 
-![img](https://github.com/QYhdong/HDAnimationTest/blob/master/HDRadarWave.gif)
