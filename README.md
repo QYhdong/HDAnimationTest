@@ -1,7 +1,7 @@
 # HDAnimationTest
 Some daily exercises of animation
 
-//雷达动画效果demo
+//动画demo...
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/HDRadarWave.gif)
 
