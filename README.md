@@ -1,7 +1,7 @@
 # HDAnimationTest
 Some daily exercises of animation
 
-//雷达动画demo
+//雷达动画效果demo
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/HDRadarWave.gif)
 
@@ -147,7 +147,8 @@ CATransition转场动画,属性如下:
     //动画起点进度 百分比
     open var startProgress: Float
     //动画终点进度 百分比
-    open var endProgress: Float
+    open var endProgress: Float
+几种type效果:(使用需谨慎)
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transitionAnimation.gif)
 
