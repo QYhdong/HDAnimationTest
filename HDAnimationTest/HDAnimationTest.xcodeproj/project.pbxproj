@@ -23,6 +23,7 @@
 		6F3DFB152058C4EA0085E9C3 /* HDAnimationTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB142058C4EA0085E9C3 /* HDAnimationTestUITests.swift */; };
 		6F3DFB232058F4A70085E9C3 /* HDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DFB222058F4A70085E9C3 /* HDView.swift */; };
 		6F50FB0820634C0800CC2226 /* HDPencilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F50FB0720634C0800CC2226 /* HDPencilViewController.swift */; };
+		6F54F9F82080B390004AE2CE /* HDMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54F9F72080B390004AE2CE /* HDMusicViewController.swift */; };
 		6F8B332A2069F25E00EB73E3 /* HDCoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B33292069F25E00EB73E3 /* HDCoreAnimationViewController.swift */; };
 		6F952148206B2D740047CF72 /* HDCoreAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F952147206B2D740047CF72 /* HDCoreAnimationView.swift */; };
 		6F95214A206B3B6D0047CF72 /* HDDefineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F952149206B3B6D0047CF72 /* HDDefineInfo.swift */; };
@@ -72,6 +73,7 @@
 		6F3DFB162058C4EA0085E9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F3DFB222058F4A70085E9C3 /* HDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDView.swift; sourceTree = "<group>"; };
 		6F50FB0720634C0800CC2226 /* HDPencilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDPencilViewController.swift; sourceTree = "<group>"; };
+		6F54F9F72080B390004AE2CE /* HDMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDMusicViewController.swift; sourceTree = "<group>"; };
 		6F8B33292069F25E00EB73E3 /* HDCoreAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDCoreAnimationViewController.swift; sourceTree = "<group>"; };
 		6F952147206B2D740047CF72 /* HDCoreAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDCoreAnimationView.swift; sourceTree = "<group>"; };
 		6F952149206B3B6D0047CF72 /* HDDefineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDDefineInfo.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				6F2491F22060BC830044A286 /* HDRadarViewController.swift */,
+				6F54F9F72080B390004AE2CE /* HDMusicViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				6F2491F52060BD650044A286 /* HDRadarView.swift in Sources */,
 				6F95214A206B3B6D0047CF72 /* HDDefineInfo.swift in Sources */,
 				6F3DFAF72058C4EA0085E9C3 /* ViewController.swift in Sources */,
+				6F54F9F82080B390004AE2CE /* HDMusicViewController.swift in Sources */,
 				6FACFCDC205FB23900FE52C1 /* HDPopOneView.swift in Sources */,
 				6F8B332A2069F25E00EB73E3 /* HDCoreAnimationViewController.swift in Sources */,
 				6F3B5739207DA83E00E507FA /* BaseAnimationViewController.swift in Sources */,

@@ -70,7 +70,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         case 2:     //雷达
             self.navigationController?.pushViewController(HDRadarViewController(), animated: true)
         case 3:     //音量
-            self.navigationController?.pushViewController(HDRadarViewController(), animated: true)
+            self.navigationController?.pushViewController(HDMusicViewController(), animated: true)
         default:
             return
         }
