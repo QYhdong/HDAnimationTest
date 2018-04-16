@@ -153,4 +153,5 @@ CATransition转场动画,属性如下:
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transitionAnimation.gif)
 
 //音量波动效果
+
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/voiceImage.gif)
