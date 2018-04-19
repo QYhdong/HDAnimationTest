@@ -87,7 +87,7 @@ class HDMusicViewController: UIViewController {
         return replicatorLayer
     }
 
-    //反射
+    //反射效果
     fileprivate func reflexLayer()->CALayer{
         
         let layerr = CALayer()

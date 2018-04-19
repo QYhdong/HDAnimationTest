@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     fileprivate func  setUpUI()  {
         
-        typeArr = ["CoreAnimation练习","贝塞尔曲线","雷达波纹","音量效果"]
+        typeArr = ["CoreAnimation练习","贝塞尔曲线","雷达波纹","音量效果","转场效果"]
         
         self.title = "HDAnimationTest"
         
@@ -71,6 +71,9 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(HDRadarViewController(), animated: true)
         case 3:     //音量
             self.navigationController?.pushViewController(HDMusicViewController(), animated: true)
+        case 4:     //转场效果
+            self.navigationController?.pushViewController(HDTransitionAnimationController(), animated: true)
+            
         default:
             return
         }
