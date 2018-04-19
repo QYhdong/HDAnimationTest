@@ -152,6 +152,10 @@ CATransition转场动画,属性如下:
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transitionAnimation.gif)
 
+
+控制器转场动画效果:
+present弹性效果:
+
 //音量波动效果
 
 CAReplicatorLayer可以将自己的子图层复制指定的次数,并且复制体会保持被复制图层的各种基础属性以及动画
