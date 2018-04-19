@@ -12,6 +12,8 @@ class HDTransitionAnimationController: UIViewController {
 
     fileprivate var typeArr:[String]!
     
+    fileprivate var nextVc:HDTransitionNextViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,8 @@ class HDTransitionAnimationController: UIViewController {
     fileprivate func  setUpUI()  {
         
         typeArr = ["滑动","渐变","自定义"]
-        
+        nextVc = HDTransitionNextViewController()
+        nextVc.transitioningDelegate = self
         view.addSubview(mainTableView)
     }
     
@@ -59,11 +62,9 @@ extension HDTransitionAnimationController:UITableViewDelegate,UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        let nextVc = HDTransitionNextViewController()
         //设置代理
-        nextVc.transitioningDelegate = self
-        self.navigationController?.pushViewController(nextVc, animated: true)
+        self.present(nextVc, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(nextVc, animated: true)
  
     }
     
@@ -92,7 +93,7 @@ class TransitionAnimationTableViewCell:UITableViewCell{
 
 class SlideSpringAnimation:NSObject,UIViewControllerAnimatedTransitioning{
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 2
+        return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -115,9 +116,12 @@ class SlideSpringAnimation:NSObject,UIViewControllerAnimatedTransitioning{
         let transitionDuration = self.transitionDuration(using: transitionContext)
         //spring
         UIView.animate(withDuration: transitionDuration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveLinear, animations: {
+            toView?.alpha = 1.0
+            toView?.frame = transitionContext.finalFrame(for: toVc!)
             
         }) { (finished) in
-            
+            let isCancel = transitionContext.transitionWasCancelled
+            transitionContext.completeTransition(!isCancel)
         }
     }
     
@@ -125,11 +129,12 @@ class SlideSpringAnimation:NSObject,UIViewControllerAnimatedTransitioning{
 
 class SlideDismissAnimation:NSObject,UIViewControllerAnimatedTransitioning{
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 2
+        return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
+        let isCancel = transitionContext.transitionWasCancelled
+        transitionContext.completeTransition(!isCancel)
     }
     
     
