@@ -153,6 +153,33 @@ CATransition转场动画,属性如下:
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transitionAnimation.gif)
 
 //音量波动效果
-CAReplicatorLayer可以将自己的子图层复制指定的次数,并且复制体会保持被复制图层的各种基础属性以及动画CAReplicatorLayer可以将自己的子图层复制指定的次数,并且复制体会保持被复制图层的各种基础属性以及动画
+
+CAReplicatorLayer可以将自己的子图层复制指定的次数,并且复制体会保持被复制图层的各种基础属性以及动画
+
+    /*
+     //复制图层次数
+     open var instanceCount: Int
+     //
+     open var preservesDepth: Bool
+     //复制间隔
+     open var instanceDelay: CFTimeInterval
+     //复制图层距上一图层的位移
+     open var instanceTransform: CATransform3D
+     //设置复制图层颜色
+     open var instanceColor: CGColor?
+     //相对于上一复制图层红色偏移量
+     open var instanceRedOffset: Float
+     //相对于上一复制图层绿色偏移量
+     open var instanceGreenOffset: Float
+     //相对于上一复制图层蓝色偏移量
+     open var instanceBlueOffset: Float
+     //相对于上一复制图层透明度偏移量
+     open var instanceAlphaOffset: Float
+     
+     */
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/voiceImage.gif)
+
+利用CAReplicatorLayer复制图层实现反射效果:
+
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/WechatIMG194.png)
