@@ -65,7 +65,7 @@ extension HDTransitionAnimationController:UITableViewDelegate,UITableViewDataSou
         //设置代理
         self.present(nextVc, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(nextVc, animated: true)
- 
+        print("111111")
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
