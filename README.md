@@ -186,6 +186,8 @@ CAReplicatorLayer可以将自己的子图层复制指定的次数,并且复制�
 
 CAGradientLayer渐变效果:
 
+![img](https://github.com/QYhdong/HDAnimationTest/blob/master/CAGradientLayerImage.gif)
+
 利用CAReplicatorLayer复制图层实现反射效果:
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/WechatIMG194.png)
