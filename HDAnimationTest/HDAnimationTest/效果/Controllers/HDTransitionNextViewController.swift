@@ -32,7 +32,7 @@ class HDTransitionNextViewController: UIViewController {
     }
     
     @objc fileprivate func dissmisSelfVc(){
-//        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     

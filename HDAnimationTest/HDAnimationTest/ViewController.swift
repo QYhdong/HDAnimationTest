@@ -72,7 +72,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         case 3:     //音量
             self.navigationController?.pushViewController(HDMusicViewController(), animated: true)
         case 4:     //转场效果
-            self.navigationController?.pushViewController(HDTransitionAnimationController(), animated: true)
+            self.navigationController?.pushViewController(HDTransitionFirstViewController(), animated: true)
         case 5:     //文字效果
             self.navigationController?.pushViewController(HDUnlockViewController(), animated: true)
             

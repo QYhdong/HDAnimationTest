@@ -12,8 +12,6 @@ class HDTransitionAnimationController: UIViewController {
 
     fileprivate var typeArr:[String]!
     
-    fileprivate var nextVc:HDTransitionNextViewController!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +21,8 @@ class HDTransitionAnimationController: UIViewController {
     fileprivate func  setUpUI()  {
         
         typeArr = ["滑动","渐变","自定义"]
-        nextVc = HDTransitionNextViewController()
-        nextVc.transitioningDelegate = self
+
+        
         view.addSubview(mainTableView)
 //        let buttoo = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
 //        buttoo.addTarget(self, action: #selector(aaa), for: UIControlEvents.touchUpInside)
@@ -35,10 +33,10 @@ class HDTransitionAnimationController: UIViewController {
     }
     
     @objc fileprivate func aaa(){
-        //设置代理
-        self.present(nextVc, animated: true, completion: nil)
-        //        self.navigationController?.pushViewController(nextVc, animated: true)
-        print("111111")
+//        //设置代理
+//        self.present(nextVc, animated: true, completion: nil)
+//        //        self.navigationController?.pushViewController(nextVc, animated: true)
+//        print("111111")
     }
     
     fileprivate lazy var mainTableView:UITableView = {
@@ -59,7 +57,7 @@ class HDTransitionAnimationController: UIViewController {
 extension HDTransitionAnimationController:UITableViewDelegate,UITableViewDataSource,UIViewControllerTransitioningDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,21 +73,10 @@ extension HDTransitionAnimationController:UITableViewDelegate,UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //设置代理
-        self.present(nextVc, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(nextVc, animated: true)
-        print("111111")
+        self.navigationController?.pushViewController(HDTransitionFirstViewController(), animated: true)
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-       // 返回UIViewControllerAnimatedTransitioning协议的对象,提供动画时间以及动画逻辑
-        return SlideSpringAnimation()
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideDismissAnimation()
-    }
-    
+
 }
 
 //cell
@@ -105,85 +92,3 @@ class TransitionAnimationTableViewCell:UITableViewCell{
     
 }
 
-//UIViewControllerAnimatedTransitioning代理
-class SlideSpringAnimation:NSObject,UIViewControllerAnimatedTransitioning{
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
-    }
-    
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        //present的时候当前控制器为fromVc
-        let fromVc = transitionContext.viewController(forKey: .from)
-        //toVc为将要显示的控制器nextVc
-        let toVc = transitionContext.viewController(forKey: .to)
-        
-        let containerView = transitionContext.containerView
-        
-        var fromView = fromVc?.view
-        var toView = toVc?.view
-        
-        if transitionContext.responds(to: #selector(UIViewControllerTransitionCoordinatorContext.view(forKey:))){
-            fromView = transitionContext.view(forKey: .from)
-            toView = transitionContext.view(forKey: .to)
-        }
-        
-        toView?.frame = CGRect(x: fromView!.frame.origin.x, y: fromView!.frame.maxY / 2, width: fromView!.frame.width, height: fromView!.frame.height)
-        toView?.alpha = 0.6
-        
-        containerView.addSubview(toView!)
-        let transitionDuration = self.transitionDuration(using: transitionContext)
-        //spring
-        UIView.animate(withDuration: transitionDuration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveLinear, animations: {
-            toView?.alpha = 1.0
-            toView?.frame = transitionContext.finalFrame(for: toVc!)
-            
-        }) { (finished) in
-            let isCancel = transitionContext.transitionWasCancelled
-            transitionContext.completeTransition(!isCancel)
-            if isCancel {
-                toView?.removeFromSuperview()
-            }
-        }
-    }
-    
-}
-
-//dismiss
-class SlideDismissAnimation:NSObject,UIViewControllerAnimatedTransitioning{
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
-    }
-    
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        
-        let fromVc = transitionContext.viewController(forKey: .from)
-        let toVc = transitionContext.viewController(forKey: .to)
-        let containerView = transitionContext.containerView
-        
-        var fromView = fromVc?.view
-        var toView = toVc?.view
-        
-        if transitionContext.responds(to: #selector(UIViewControllerTransitionCoordinatorContext.view(forKey:))){
-            fromView = transitionContext.view(forKey: .from)
-            toView = transitionContext.view(forKey: .to)
-        }
-        
-        fromView?.frame = transitionContext.finalFrame(for: fromVc!)
-        toView?.frame = transitionContext.finalFrame(for: toVc!)
-        
-        fromView?.alpha = 1
-        toView?.alpha = 0
-        
-        containerView.addSubview(toView!)
-        
-        UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
-            fromView?.alpha = 0
-            toView?.alpha = 1
-        }) { (finished) in
-            let isCancel = transitionContext.transitionWasCancelled
-            transitionContext.completeTransition(!isCancel)
-        }
-
-    }
-    
-}
