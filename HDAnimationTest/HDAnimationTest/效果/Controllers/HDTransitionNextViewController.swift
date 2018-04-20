@@ -20,7 +20,7 @@ class HDTransitionNextViewController: UIViewController {
         dissMissBtn.center = view.center
         dissMissBtn.setTitle("返回", for: UIControlState())
         dissMissBtn.setTitleColor(UIColor.black, for: UIControlState())
-        dissMissBtn.addTarget(self, action: #selector(dissmisSelfVc), for: UIControlEvents())
+        dissMissBtn.addTarget(self, action: #selector(dissmisSelfVc), for: UIControlEvents.touchUpInside)
         dissMissBtn.backgroundColor = UIColor.red
         view.addSubview(dissMissBtn)
         

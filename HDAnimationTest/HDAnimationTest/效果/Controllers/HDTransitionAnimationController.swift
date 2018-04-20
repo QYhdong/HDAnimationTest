@@ -26,6 +26,19 @@ class HDTransitionAnimationController: UIViewController {
         nextVc = HDTransitionNextViewController()
         nextVc.transitioningDelegate = self
         view.addSubview(mainTableView)
+//        let buttoo = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+//        buttoo.addTarget(self, action: #selector(aaa), for: UIControlEvents.touchUpInside)
+//        buttoo.backgroundColor = UIColor.red
+//        view.addSubview(buttoo)
+        
+        view.backgroundColor = UIColor.white
+    }
+    
+    @objc fileprivate func aaa(){
+        //设置代理
+        self.present(nextVc, animated: true, completion: nil)
+        //        self.navigationController?.pushViewController(nextVc, animated: true)
+        print("111111")
     }
     
     fileprivate lazy var mainTableView:UITableView = {
@@ -46,7 +59,7 @@ class HDTransitionAnimationController: UIViewController {
 extension HDTransitionAnimationController:UITableViewDelegate,UITableViewDataSource,UIViewControllerTransitioningDelegate{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +82,7 @@ extension HDTransitionAnimationController:UITableViewDelegate,UITableViewDataSou
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+       // 返回UIViewControllerAnimatedTransitioning协议的对象,提供动画时间以及动画逻辑
         return SlideSpringAnimation()
     }
     
@@ -91,14 +105,18 @@ class TransitionAnimationTableViewCell:UITableViewCell{
     
 }
 
+//UIViewControllerAnimatedTransitioning代理
 class SlideSpringAnimation:NSObject,UIViewControllerAnimatedTransitioning{
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        //present的时候当前控制器为fromVc
         let fromVc = transitionContext.viewController(forKey: .from)
+        //toVc为将要显示的控制器nextVc
         let toVc = transitionContext.viewController(forKey: .to)
+        
         let containerView = transitionContext.containerView
         
         var fromView = fromVc?.view
@@ -122,21 +140,50 @@ class SlideSpringAnimation:NSObject,UIViewControllerAnimatedTransitioning{
         }) { (finished) in
             let isCancel = transitionContext.transitionWasCancelled
             transitionContext.completeTransition(!isCancel)
+            if isCancel {
+                toView?.removeFromSuperview()
+            }
         }
     }
     
 }
 
+//dismiss
 class SlideDismissAnimation:NSObject,UIViewControllerAnimatedTransitioning{
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let isCancel = transitionContext.transitionWasCancelled
-        transitionContext.completeTransition(!isCancel)
+        
+        let fromVc = transitionContext.viewController(forKey: .from)
+        let toVc = transitionContext.viewController(forKey: .to)
+        let containerView = transitionContext.containerView
+        
+        var fromView = fromVc?.view
+        var toView = toVc?.view
+        
+        if transitionContext.responds(to: #selector(UIViewControllerTransitionCoordinatorContext.view(forKey:))){
+            fromView = transitionContext.view(forKey: .from)
+            toView = transitionContext.view(forKey: .to)
+        }
+        
+        fromView?.frame = transitionContext.finalFrame(for: fromVc!)
+        toView?.frame = transitionContext.finalFrame(for: toVc!)
+        
+        fromView?.alpha = 1
+        toView?.alpha = 0
+        
+        containerView.addSubview(toView!)
+        
+        UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
+            fromView?.alpha = 0
+            toView?.alpha = 1
+        }) { (finished) in
+            let isCancel = transitionContext.transitionWasCancelled
+            transitionContext.completeTransition(!isCancel)
+        }
+
     }
-    
-    
     
 }
