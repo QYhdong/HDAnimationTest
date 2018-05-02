@@ -153,7 +153,9 @@ CATransition转场动画,属性如下:
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/transitionAnimation.gif)
 
 
-控制器转场动画效果:
+控制器转场动画效果:考虑动画使用场景,转场多为页面跳转或是一些图片的翻转,可以通过uiview动画函数或核心动画做一些自定义的动画效果.
+主要介绍自定义转场动画实现在UINavigationController的push和pop以及modal形式中的场景:
+
 present弹性效果:
 
 //音量波动效果
