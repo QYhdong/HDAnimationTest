@@ -10,5 +10,6 @@
 #define Bridge_Header_h
 
 #import <POP/POP.h>
+#import <Lottie/Lottie.h>
 
 #endif /* Bridge_Header_h */

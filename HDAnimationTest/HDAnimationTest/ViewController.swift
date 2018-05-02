@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     fileprivate func  setUpUI()  {
         
-        typeArr = ["CoreAnimation练习","贝塞尔曲线","雷达波纹","音量效果","转场效果","文字效果"]
+        typeArr = ["CoreAnimation练习","贝塞尔曲线","雷达波纹","音量效果","转场效果","文字效果","lottie-iosTab"]
         
         self.title = "HDAnimationTest"
         
@@ -75,7 +75,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
             self.navigationController?.pushViewController(HDTransitionFirstViewController(), animated: true)
         case 5:     //文字效果
             self.navigationController?.pushViewController(HDUnlockViewController(), animated: true)
-            
+        case 6:
+            self.present(HDLottieTabbarViewController(), animated: true) {
+                
+            }
         default:
             return
         }

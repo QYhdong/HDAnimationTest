@@ -8,6 +8,7 @@ target 'HDAnimationTest' do
   # Pods for HDAnimationTest
   pod 'pop', '~> 1.0'
   pod 'SnapKit'
+  pod 'lottie-ios'
   
   target 'HDAnimationTestTests' do
     inherit! :search_paths
