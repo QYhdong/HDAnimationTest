@@ -190,6 +190,8 @@ CAGradientLayer渐变效果:
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/CAGradientLayerImage.gif)
 
+Lottie加载AE动画效果:
+
 利用CAReplicatorLayer复制图层实现反射效果:
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/WechatIMG194.png)
