@@ -190,7 +190,7 @@ CAGradientLayer渐变效果:
 
 ![img](https://github.com/QYhdong/HDAnimationTest/blob/master/CAGradientLayerImage.gif)
 
-Lottie加载AE动画效果:(导入json文件加载)
+Lottie加载AE动画效果:(导入json文件加载) 使用AE工具导出json文件时需要安装bodymovin插件
 
 利用CAReplicatorLayer复制图层实现反射效果:
 
